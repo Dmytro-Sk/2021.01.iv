@@ -1,5 +1,6 @@
 ------------------ GET LOCATORS ------------------
 
+CATEGORY = ''
 PAGE_URL = ''
 PRODUCT_ID = ''
 IMAGE_URL = ''
@@ -12,6 +13,7 @@ GENDER = ''
 
 -------------- GET CUSTOM SETTINGS ---------------
 
+'category',
 'page_url',
 'product_id',
 'image_url',
@@ -24,6 +26,7 @@ GENDER = ''
 
 --------------- GET PARSE ELEMENTS ---------------
 
+category = response.xpath(Locators.CATEGORY).get()
 page_url = response.xpath(Locators.PAGE_URL).get()
 product_id = response.xpath(Locators.PRODUCT_ID).get()
 image_url = response.xpath(Locators.IMAGE_URL).get()
@@ -36,6 +39,7 @@ gender = response.xpath(Locators.GENDER).get()
 
 ------------ GET PARSE ITEMS ELEMENTS ------------
 
+items['category'] = category
 items['page_url'] = page_url
 items['product_id'] = product_id
 items['image_url'] = image_url
@@ -48,6 +52,7 @@ items['gender'] = gender
 
 ------------------- GET ITEMS --------------------
 
+category = scrapy.Field()
 page_url = scrapy.Field()
 product_id = scrapy.Field()
 image_url = scrapy.Field()

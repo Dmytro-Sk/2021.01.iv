@@ -7,6 +7,14 @@ import scrapy
 
 
 class FloComTrItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    category = scrapy.Field()
+    subcategory_lvl1 = scrapy.Field()
+    subcategory_lvl2 = scrapy.Field()
+    page_url = scrapy.Field()
+    product_id = scrapy.Field()
+    image_url = scrapy.Field()
+    brand = scrapy.Field()
+    price = scrapy.Field()
+    title = scrapy.Field()
+    description = scrapy.Field()
+    gender = scrapy.Field()

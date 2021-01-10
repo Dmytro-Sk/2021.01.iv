@@ -6,8 +6,19 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+from scrapy.exceptions import DropItem
 
 
-class IFloComTrPipeline:
+class FloComTrPipeline:
+    """Drop duplicate"""
+
+    def __init__(self):
+        self.ids_seen = set()
+
     def process_item(self, item, spider):
-        return item
+        adapter = ItemAdapter(item)
+        if adapter['page_url'] in self.ids_seen:
+            raise DropItem(f"Duplicate item found: {item!r}")
+        else:
+            self.ids_seen.add(adapter['page_url'])
+            return item
