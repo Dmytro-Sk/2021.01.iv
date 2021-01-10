@@ -1,0 +1,60 @@
+------------------ GET LOCATORS ------------------
+
+PAGE_URL = ''
+PRODUCT_ID = ''
+IMAGE_URL = ''
+BRAND = ''
+PRICE = ''
+TITLE = ''
+DESCRIPTION = ''
+GENDER = ''
+
+
+-------------- GET CUSTOM SETTINGS ---------------
+
+'page_url',
+'product_id',
+'image_url',
+'brand',
+'price',
+'title',
+'description',
+'gender',
+
+
+--------------- GET PARSE ELEMENTS ---------------
+
+page_url = response.xpath(Locators.PAGE_URL).get()
+product_id = response.xpath(Locators.PRODUCT_ID).get()
+image_url = response.xpath(Locators.IMAGE_URL).get()
+brand = response.xpath(Locators.BRAND).get()
+price = response.xpath(Locators.PRICE).get()
+title = response.xpath(Locators.TITLE).get()
+description = response.xpath(Locators.DESCRIPTION).get()
+gender = response.xpath(Locators.GENDER).get()
+
+
+------------ GET PARSE ITEMS ELEMENTS ------------
+
+items['page_url'] = page_url
+items['product_id'] = product_id
+items['image_url'] = image_url
+items['brand'] = brand
+items['price'] = price
+items['title'] = title
+items['description'] = description
+items['gender'] = gender
+
+
+------------------- GET ITEMS --------------------
+
+page_url = scrapy.Field()
+product_id = scrapy.Field()
+image_url = scrapy.Field()
+brand = scrapy.Field()
+price = scrapy.Field()
+title = scrapy.Field()
+description = scrapy.Field()
+gender = scrapy.Field()
+
+

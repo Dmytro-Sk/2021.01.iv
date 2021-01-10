@@ -6,7 +6,7 @@
 import scrapy
 
 
-class IFloComTrItem(scrapy.Item):
+class FloComTrItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

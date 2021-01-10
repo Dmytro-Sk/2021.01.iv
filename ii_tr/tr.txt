@@ -1,0 +1,19 @@
+https://www.upwork.com/jobs/~019f2116bccfe3f624
+
+Write a Scrapy crawler for a shoe retailer to extract the fields described below.
+You will deliver the python script to extract the fields to a csv file.
+
+Web Site to crawl: https://www.flo.com.tr/tum-kategoriler
+Iterate every page, follow the landing page of each product and extract the fields below:
+landing_page_url
+product_id (Ürün Kodu field in the landing page)
+main_product_image_url
+brand (Marka field)
+actual_price
+title
+description
+gender (female,mail,unisex,kids)
+category hierarchy level 1 (extract from the breadcrumb in the landing page)
+category hierarchy level 2 (extract from the breadcrumb in the landing page)
+category hierarchy level 3 (extract from the breadcrumb in the landing page)
+category hierarchy level 4 (extract from the breadcrumb in the landing page)

@@ -1,0 +1,12 @@
+User-agent: * 
+Allow: / 
+  
+Disallow: *sort= 
+Disallow: /search?q=* 
+Disallow: &min=
+Disallow: &max=
+Disallow: *&percent_min=
+Disallow: *&percent_max=
+Disallow: *ab-test
+
+Sitemap: https://www.flo.com.tr/sitemap.xml
