@@ -63,7 +63,7 @@ class Converter:
 
     def write_column(self) -> None:
         for column, spider_name in enumerate(self.args['spiders_names']):
-            with open(f"./{spider_name}.txt", 'a') as f:
+            with open(f"../{spider_name}_headers.txt", 'w') as f:
                 f.write(self.conv_def_name(self.get_locators.__name__))
                 f.writelines('\n'.join(self.get_locators(column)) + '\n' * 3)
                 f.write(self.conv_def_name(self.get_custom_settings.__name__))
